@@ -1,0 +1,89 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Responsive container for general pages */
+.container, .adorned-page, .large-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    margin: 0 10px;
+    box-sizing: border-box;
+}
+
+/* Large container for the third page */
+.large-container {
+    max-width: 10000px;
+    height: auto;
+    overflow-y: auto; /* In case of long content, allow scrolling */
+}
+
+.large-container h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #ff7e5f;
+}
+
+.large-container p {
+    font-size: 0.8em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify; /* Justifica el texto para que ocupe todo el ancho */
+}
+
+
+
+/* Input fields and buttons */
+input, button {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background: #ff7e5f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #feb47b;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
+    .large-container {
+        padding: 18px;
+        max-width: 100%;
+    }
+
+    h1, h2, p {
+        font-size: 1.5em;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
