@@ -1,8 +1,7 @@
 // Función para validar el código de acceso en la primera página
 function validateCode() {
     const code = document.getElementById("accessCode").value;
-    const correctCode = "0607";
-    const correctCode = "2112";// Cambia este código por el que desees
+    const correctCode = "0607" "2112";// Cambia este código por el que desees
 
     if (code === correctCode) {
         window.location.href = "segunda.html"; // Redirige a la segunda página si el código es correcto
