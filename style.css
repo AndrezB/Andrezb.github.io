@@ -1,43 +1,20 @@
-/* Fondo animado de cielo estrellado */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('https://cdn.pixabay.com/photo/2017/11/14/17/50/astronomy-2949056_960_720.jpg') no-repeat center center fixed; 
-    background-size: cover;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     color: #333;
-    overflow: hidden; /* Asegurarse de que el fondo se quede estático */
-}
-
-/* Animación de las estrellas en movimiento */
-@keyframes moveStars {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-.stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: url('https://cdn.pixabay.com/photo/2017/10/13/12/34/space-2847263_960_720.jpg') repeat;
-    animation: moveStars 100s linear infinite;
-    z-index: -1;
 }
 
 /* Responsive container for general pages */
 .container, .adorned-page, .large-container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.8); /* Fondo con opacidad para mejor visibilidad */
+    background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -46,7 +23,29 @@ body {
     box-sizing: border-box;
 }
 
-/* Estilo para los botones y entradas */
+/* Large container for the third page */
+.large-container {
+    max-width: 10000px;
+    height: auto;
+    overflow-y: auto; /* In case of long content, allow scrolling */
+}
+
+.large-container h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #ff7e5f;
+}
+
+.large-container p {
+    font-size: 0.8em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify; /* Justifica el texto para que ocupe todo el ancho */
+}
+
+
+
+/* Input fields and buttons */
 input, button {
     padding: 10px;
     margin: 10px 0;
@@ -68,6 +67,7 @@ button:hover {
     background: #feb47b;
 }
 
+/* Mobile responsive adjustments */
 @media (max-width: 600px) {
     body {
         height: auto;
